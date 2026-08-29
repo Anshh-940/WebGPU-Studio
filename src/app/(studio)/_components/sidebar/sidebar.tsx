@@ -113,7 +113,7 @@ export function Sidebar({ theme, onThemeChange, expanded: controlledExpanded, on
       })}
       <div className="relative group/item isolate">
         <a
-          href="https://github.com/samarthshukla6/WebGPU-Studio"
+          href="https://github.com/Anshh-940/WebGPU-Studio"
           target="_blank"
           rel="noopener noreferrer"
           onClick={closeMobile}
@@ -133,8 +133,8 @@ export function Sidebar({ theme, onThemeChange, expanded: controlledExpanded, on
   );
 
   const themeBlock = (
-    <div className="flex-shrink-0 mt-3 pt-3 border-t border-gray-200/50 dark:border-gray-700/50 flex justify-center">
-      <ThemeToggle theme={theme} onThemeChange={onThemeChange} />
+    <div className="flex-shrink-0 mt-6 pt-4 border-t border-gray-200/50 dark:border-gray-700/50 flex justify-start px-2">
+      <ThemeToggle theme={theme} onThemeChange={onThemeChange} className="relative top-[65px]" />
     </div>
   );
 
