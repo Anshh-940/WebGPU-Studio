@@ -343,6 +343,5 @@ AUTH0_CLIENT_SECRET='your-client-secret'
 
 **Built for the local-first AI community**
 
-[Live Demo](https://web-gpu-studio.vercel.app/) · [Report an Issue](https://github.com/samarthshukla6/WebGPU-Studio/issues) · [Robo Physics Simulator](https://github.com/samarthshukla6/Robo-Physics-Simulator) · [WebGPU Spec](https://www.w3.org/TR/webgpu/)
-
+[Live Demo](https://web-gpu-studio.vercel.app/)
 </div>
