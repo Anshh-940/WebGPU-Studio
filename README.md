@@ -329,17 +329,6 @@ AUTH0_CLIENT_SECRET='your-client-secret'
 
 ---
 
-## Related Projects
-
-| Project | Description |
-|---------|-------------|
-| [**Robo Physics Simulator**](https://github.com/samarthshukla6/Robo-Physics-Simulator) | Sibling repo — browser MuJoCo WASM simulator for the SO-101 robot arm ([live demo](https://robo-simulator-peach.vercel.app/)) |
-| [**WebLLM**](https://github.com/mlc-ai/web-llm) | MLC-LLM browser inference engine |
-| [**Transformers.js**](https://huggingface.co/docs/transformers.js) | Hugging Face ONNX/WASM inference in JS |
-| [**Vercel AI SDK**](https://sdk.vercel.ai/) | Unified streaming and structured output API |
-
----
-
 ## Acknowledgments
 
 - [**Built-in AI**](https://github.com/built-in-ai) — `transformers-js` and `web-llm` packages
