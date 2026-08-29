@@ -4,7 +4,7 @@
 
 **Local-first AI workspace — chat, vision, embeddings, and structured JSON, powered by WebGPU in your browser**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-webgpustudio-three.vercel.app-7c3aed?style=for-the-badge)](https://webgpustudio-three.vercel.app/)
+[![Live Demo](https://img.shields.io/static/v1?label=LIVE%20DEMO&message=WEBGPUSTUDIO-THREE.VERCEL.APP&color=7c3aed&style=for-the-badge&labelColor=4b5563)](https://webgpustudio-three.vercel.app/)
 [![WebGPU](https://img.shields.io/badge/Inference-WebGPU-76B900?style=for-the-badge)](https://www.w3.org/TR/webgpu/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
