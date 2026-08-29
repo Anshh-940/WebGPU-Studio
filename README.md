@@ -4,7 +4,7 @@
 
 **Local-first AI workspace — chat, vision, embeddings, and structured JSON, powered by WebGPU in your browser**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-web--gpu--studio.vercel.app-7c3aed?style=for-the-badge)](https://web-gpu-studio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-webgpustudio-three.vercel.app-7c3aed?style=for-the-badge)](https://webgpustudio-three.vercel.app/)
 [![WebGPU](https://img.shields.io/badge/Inference-WebGPU-76B900?style=for-the-badge)](https://www.w3.org/TR/webgpu/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
@@ -13,7 +13,7 @@
 
 *Run open-source LLMs and vision models locally — no cloud API keys, no per-token billing.*
 
-**Live app:** [https://web-gpu-studio.vercel.app/](https://web-gpu-studio.vercel.app/)
+**Live app:** [https://webgpustudio-three.vercel.app/](https://webgpustudio-three.vercel.app/)
 
 </div>
 
@@ -278,7 +278,7 @@ webgpu-studio/
 
 ## Getting Started
 
-**Try it live:** [https://web-gpu-studio.vercel.app/](https://web-gpu-studio.vercel.app/)
+**Try it live:** [https://webgpustudio-three.vercel.app/](https://webgpustudio-three.vercel.app/)
 
 ### Prerequisites
 
@@ -343,5 +343,5 @@ AUTH0_CLIENT_SECRET='your-client-secret'
 
 **Built for the local-first AI community**
 
-[Live Demo](https://web-gpu-studio.vercel.app/)
+[Live Demo](https://webgpustudio-three.vercel.app/)
 </div>
