@@ -22,6 +22,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "WebGPU Studio - Local-First AI Playground",
   description: "WebGPU Studio: your sleek local-first AI copilot for chat, vision, embeddings, and structured output.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
