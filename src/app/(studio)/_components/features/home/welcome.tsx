@@ -106,15 +106,12 @@ export function Welcome({
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] h-full py-10 px-5 text-center w-full max-w-full box-border relative m-0 shrink-0 grow-0 top-0 overflow-x-hidden overflow-y-visible bg-transparent">
       <FloatingHeroSection />
 
-      <div className="w-full max-w-[800px] mx-auto relative z-10 pointer-events-auto flex flex-col items-center justify-center flex-1 min-h-0 overflow-y-auto overflow-x-hidden min-w-0">
-        <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 dark:border-violet-300/30 bg-gray-800/95 dark:bg-black/40 px-4 py-1.5 mb-6 shadow-sm">
-          <svg className="h-3.5 w-3.5 text-amber-200 dark:text-violet-200 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-          </svg>
-          <span className="text-xs font-medium tracking-wide text-white">Introducing WebGPU Studio</span>
+      <div className="w-full max-w-[800px] md:max-w-[1280px] mx-auto relative z-10 pointer-events-auto flex flex-col items-center justify-center flex-1 min-h-0 overflow-y-auto overflow-x-hidden md:overflow-x-visible min-w-0">
+        <div className="welcomeBadge inline-flex items-center gap-2 rounded-full border border-violet-500/30 dark:border-violet-300/30 bg-gray-800/95 dark:bg-black/40 px-4 py-1.5 mb-6 shadow-sm">
+          <span className="welcomeBadgeText text-xs font-medium tracking-wide text-white">Introducing WebGPU Studio</span>
         </div>
         <motion.h1
-          className="font-[family-name:var(--font-aspekta)] w-full text-center font-bold tracking-[-2px] mb-4 leading-[1.2] flex flex-col items-center justify-center gap-3 py-4 px-2 sm:px-4 md:px-6"
+          className="font-[family-name:var(--font-geist-sans)] w-full text-center font-bold tracking-[-2px] mb-4 leading-[1.2] flex flex-col items-center justify-center gap-3 py-4 px-2 sm:px-4 md:px-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...FADE_IN.transition, delay: 0.3 }}
@@ -125,13 +122,12 @@ export function Welcome({
           >
             WebGPU Studio
           </span>
-          <span className="block w-full text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-violet-500 dark:text-violet-400">
-            OWN YOUR AI
+          <span className="welcomeSecondary block w-full text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-white">
+            Own your AI.
           </span>
         </motion.h1>
         <motion.p
-          className="text-lg font-medium tracking-[0.12em] leading-relaxed max-w-[640px] mx-auto py-2 px-2 overflow-visible"
-          style={GRADIENT_STYLE("--welcome-subtitle-gradient")}
+          className="welcomeDescription font-[family-name:var(--font-geist-sans)] text-lg font-normal tracking-[0.04em] leading-relaxed max-w-[640px] mx-auto py-2 px-2 overflow-visible text-white/75"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...FADE_IN.transition, delay: 0.5 }}
@@ -147,7 +143,7 @@ export function Welcome({
           <motion.button
             type="button"
             onClick={() => sidebar?.expandSidebar()}
-            className="rounded-xl border-2 border-gray-300 dark:border-gray-500 bg-gray-900/80 dark:bg-black/50 px-6 py-3 text-sm font-semibold text-gray-100 dark:text-white hover:bg-gray-800/90 hover:border-violet-400/60 dark:hover:bg-white/10 dark:hover:border-violet-400/60 transition-all duration-200"
+            className="welcomeButton rounded-xl border-2 border-gray-300 dark:border-gray-500 bg-gray-900/80 dark:bg-black/50 px-6 py-3 text-sm font-semibold text-gray-100 dark:text-white hover:bg-gray-800/90 hover:border-violet-400/60 dark:hover:bg-white/10 dark:hover:border-violet-400/60 transition-all duration-200"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -156,8 +152,8 @@ export function Welcome({
         </motion.div>
 
       {showInput && (
-        <div className="mt-12 w-full max-w-[800px] px-0 flex-shrink-0">
-          <div className="relative rounded-2xl border border-gray-200/80 dark:border-gray-600/60 overflow-hidden transition-all bg-gradient-to-br from-slate-50 via-white to-slate-50/80 shadow-lg shadow-gray-300/40 dark:from-gray-800 dark:via-gray-800/95 dark:to-gray-900 dark:shadow-black/40 backdrop-blur-sm">
+        <div className="mt-10 mb-8 w-full max-w-[800px] md:w-[min(64vw,1280px)] md:max-w-none px-0 flex-shrink-0">
+          <div className="composerBeam composerSurface relative rounded-[20px] border border-white/10 overflow-hidden transition-all bg-[linear-gradient(110deg,rgba(28,24,34,0.94),rgba(13,31,35,0.92))] shadow-[0_18px_55px_rgba(0,0,0,0.55)] backdrop-blur-xl">
             {!isFeatureDisabled && firstName && !input && (
               <label className="absolute top-[18px] left-6 pointer-events-none text-[15px] text-gray-500 dark:text-gray-400 z-[1] font-[family-name:var(--font-aspekta)]">
                 <span className="bg-gradient-to-r from-violet-500 to-cyan-400 bg-clip-text text-transparent">Hello {firstName}</span>, How can I help you today?
@@ -165,7 +161,7 @@ export function Welcome({
             )}
             <textarea
               ref={inputRef}
-              className="w-full min-h-[60px] max-h-[300px] py-[18px] px-6 pt-5 border-none bg-transparent text-gray-900 dark:text-gray-100 text-[15px] resize-none relative z-[2] overflow-y-auto focus:outline-none font-[family-name:var(--font-aspekta)]"
+              className="w-full min-h-[60px] max-h-[300px] py-4 px-6 pt-5 border-none bg-transparent text-white text-[15px] resize-none relative z-[2] overflow-y-auto focus:outline-none font-[family-name:var(--font-aspekta)] placeholder:text-white/50"
               value={input}
               onChange={(e) => onInputChange(e.target.value)}
               placeholder={placeholder}
@@ -174,7 +170,7 @@ export function Welcome({
               rows={1}
               autoFocus
             />
-            <div className="flex items-center justify-between py-2 px-3">
+            <div className="flex items-center justify-between py-2 px-4">
               <div className="flex items-center gap-1.5">
                 {modelId && onModelChange && activeSection && (
                   <ModelSelector modelId={modelId} onModelChange={onModelChange} activeSection={activeSection} disabled={inputDisabled} />
@@ -186,7 +182,7 @@ export function Welcome({
                   <StopIcon size={16} />
                 </button>
                 )}
-                <button type="button" className="w-8 h-8 rounded-lg border-none bg-violet-600 text-white flex items-center justify-center flex-shrink-0 hover:bg-cyan-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onClick={onSend} disabled={sendDisabled} title="Send message">
+                <button type="button" className="composerSend w-9 h-9 rounded-full border border-white/10 bg-white/15 text-white flex items-center justify-center flex-shrink-0 hover:bg-white/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onClick={onSend} disabled={sendDisabled} title="Send message">
                   {pending ? <LoadingIcon size={18} /> : <SendIcon size={18} />}
                 </button>
               </div>

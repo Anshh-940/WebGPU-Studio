@@ -6,10 +6,8 @@ import styles from "@/app/page.module.css";
 
 function StudioMainAreaInner({
   children,
-  sidebarExpanded,
 }: {
   children: ReactNode;
-  sidebarExpanded: boolean;
 }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -31,7 +29,7 @@ function StudioMainAreaInner({
     };
   }, [pathname, router]);
 
-  const mainOffset = sidebarExpanded ? "md:ml-[288px]" : "md:ml-[88px]";
+  const mainOffset = "";
 
   return (
     <div className={`${styles.mainContainer} ml-0 ${mainOffset}`}>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Sidebar } from "@/studio/_components/sidebar/sidebar";
 import { StudioMainArea } from "@/studio/_components/studio-main-area";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -19,29 +19,25 @@ export default function StudioLayout({
   children: React.ReactNode;
 }) {
   const { theme, setTheme } = useTheme();
-  const [sidebarExpanded, setSidebarExpanded] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const expandSidebar = useCallback(() => setSidebarExpanded(true), []);
-  const isLhsNavOpen = sidebarExpanded || mobileSidebarOpen;
+  const isLhsNavOpen = mobileSidebarOpen;
 
   useEffect(() => {
     bootWebLLMRuntime();
   }, []);
 
   return (
-    <SidebarProvider expandSidebar={expandSidebar} isLhsNavOpen={isLhsNavOpen}>
+    <SidebarProvider expandSidebar={() => undefined} isLhsNavOpen={isLhsNavOpen}>
       <div className={`${styles.page} ${styles[theme]}`}>
         {/* <InactivityLogout /> */}
         {/* <AuthNotifications /> */}
         <Sidebar
           theme={theme}
           onThemeChange={setTheme}
-          expanded={sidebarExpanded}
-          onExpandedChange={setSidebarExpanded}
           mobileOpen={mobileSidebarOpen}
           onMobileOpenChange={setMobileSidebarOpen}
         />
-        <StudioMainArea sidebarExpanded={sidebarExpanded}>{children}</StudioMainArea>
+        <StudioMainArea>{children}</StudioMainArea>
       </div>
     </SidebarProvider>
   );

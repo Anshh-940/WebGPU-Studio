@@ -115,9 +115,9 @@ export function ChatSection({
         modelProgress={modelProgress}
       />
 
-      <div className="sticky bottom-0 left-0 right-0 py-2 pb-3 flex-shrink-0 z-10">
-        <div className="max-w-[1200px] mx-auto w-full">
-          <div className="relative rounded-2xl border border-gray-200/80 dark:border-gray-600/60 overflow-hidden transition-all bg-gradient-to-br from-slate-50 via-white to-slate-50/80 dark:from-gray-800 dark:via-gray-800/95 dark:to-gray-900 shadow-lg shadow-gray-300/40 dark:shadow-black/40 backdrop-blur-sm">
+      <div className="sticky bottom-0 left-0 right-0 py-2 pb-3 md:pb-8 flex-shrink-0 z-10">
+        <div className="w-full md:w-[min(64vw,1280px)] md:max-w-none mx-auto">
+          <div className="composerBeam composerSurface relative rounded-[20px] border border-white/10 overflow-hidden transition-all bg-[linear-gradient(110deg,rgba(28,24,34,0.94),rgba(13,31,35,0.92))] shadow-[0_18px_55px_rgba(0,0,0,0.55)] backdrop-blur-xl">
             {!isFeatureDisabled && firstName && !input && (
               <label className="absolute top-[18px] left-6 pointer-events-none text-[15px] text-gray-500 dark:text-gray-400 z-[1] font-[family-name:var(--font-aspekta)]">
                 <span className="bg-gradient-to-r from-violet-500 to-cyan-400 bg-clip-text text-transparent">
@@ -128,7 +128,7 @@ export function ChatSection({
             )}
             <textarea
               ref={inputRef}
-              className="w-full min-h-[60px] max-h-[300px] py-[18px] px-6 pt-5 border-none bg-transparent text-gray-900 dark:text-gray-100 text-[15px] resize-none relative z-[2] overflow-y-auto focus:outline-none font-[family-name:var(--font-aspekta)]"
+              className="w-full min-h-[60px] max-h-[300px] py-4 px-6 pt-5 border-none bg-transparent text-white text-[15px] resize-none relative z-[2] overflow-y-auto focus:outline-none font-[family-name:var(--font-aspekta)] placeholder:text-white/50"
               value={input}
               onChange={(e) => onInputChange(e.target.value)}
               placeholder={!firstName ? "How can I help you today?" : ""}
@@ -137,7 +137,7 @@ export function ChatSection({
               rows={1}
               autoFocus
             />
-            <div className="flex items-center justify-between py-2 px-3">
+            <div className="flex items-center justify-between py-2 px-4">
               <div className="flex items-center gap-1.5">
                 <ModelSelector
                   modelId={modelId}
@@ -159,7 +159,7 @@ export function ChatSection({
                 )}
                 <button
                   type="button"
-                  className="w-8 h-8 rounded-lg border-none bg-violet-600 text-white flex items-center justify-center flex-shrink-0 hover:bg-cyan-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="composerSend w-9 h-9 rounded-full border border-white/10 bg-white/15 text-white flex items-center justify-center flex-shrink-0 hover:bg-white/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   onClick={onSend}
                   disabled={pending || !input.trim() || isFeatureDisabled}
                   title="Send message"

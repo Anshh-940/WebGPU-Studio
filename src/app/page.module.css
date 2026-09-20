@@ -1,21 +1,19 @@
 .page {
-  --bg: #05080f;
-  --panel: rgba(16, 24, 40, 0.75);
-  --panel-strong: rgba(255, 255, 255, 0.04);
-  --border: rgba(255, 255, 255, 0.08);
-  --text-primary: #e5e8ff;
-  --text-secondary: #a1accf;
-  --muted: #7182a6;
+  --bg: #080808;
+  --panel: rgba(25, 25, 27, 0.82);
+  --panel-strong: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.1);
+  --text-primary: #f1f1f1;
+  --text-secondary: #a5a5ad;
+  --muted: #777780;
   --accent: #7c3aed;
   --accent-2: #22d3ee;
   --progress-circle-bg: #0f172a;
-  --shadow: 0 18px 80px rgba(0, 0, 0, 0.35);
+  --shadow: 0 18px 80px rgba(0, 0, 0, 0.55);
   --blur: blur(16px);
 
   min-height: 100vh;
-  background: radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.2), transparent 30%),
-    radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.18), transparent 32%),
-    linear-gradient(145deg, #05080f 0%, #0a1223 40%, #05080f 100%);
+  background: #080808;
   color: var(--text-primary);
   transition: background 0.3s ease, color 0.3s ease;
   padding: 0;
@@ -40,7 +38,7 @@
 }
 
 .dark {
-  /* Uses base variables; class prevents undefined in template. */
+  background: #080808;
   color: inherit;
 }
 
